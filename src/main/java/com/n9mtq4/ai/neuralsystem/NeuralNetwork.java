@@ -16,7 +16,7 @@ public class NeuralNetwork implements Serializable {
 	private double error;
 	private ArrayList<Layer> layers;
 	
-	public NeuralNetwork(int[] topology) {
+	public NeuralNetwork(int... topology) {
 		this.layers = new ArrayList<Layer>();
 		int numLayers = topology.length;
 		for (int layerNum = 0; layerNum < numLayers; layerNum++) {
@@ -34,7 +34,7 @@ public class NeuralNetwork implements Serializable {
 		}
 	}
 	
-	public void feedForward(double[] inputValues) {
+	public void feedForward(double... inputValues) {
 		
 //		assign the input values into the input neurons
 		for (int i = 0; i < inputValues.length; i++) {
@@ -51,7 +51,7 @@ public class NeuralNetwork implements Serializable {
 		
 	}
 	
-	public void backProp(double[] targetValues) {
+	public void backProp(double... targetValues) {
 		
 //		Calculate overall net error (RMS of output neuron errors) (Root Mean Square)
 		error = 0d;
@@ -92,6 +92,12 @@ public class NeuralNetwork implements Serializable {
 			
 		}
 		
+	}
+	
+	public ArrayList<Double> getResults() {
+		ArrayList<Double> results = new ArrayList<Double>();
+		getResults(results);
+		return results;
 	}
 	
 	public void getResults(ArrayList<Double> resultValues) {

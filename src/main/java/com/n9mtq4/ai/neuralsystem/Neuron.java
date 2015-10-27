@@ -12,7 +12,7 @@ public class Neuron implements Serializable {
 	
 	private static final long serialVersionUID = 6542725002195157941L;
 	
-	private static final double LEARNING_RATE = 0.15d; //TODO: update theses values
+	private static final double LEARNING_RATE = 0.2d; //TODO: update theses values
 	private static final double MOMENTUM = 0.5d;
 	
 	private static double transferFunction(double x) {

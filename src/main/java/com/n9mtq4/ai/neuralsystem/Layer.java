@@ -1,5 +1,6 @@
 package com.n9mtq4.ai.neuralsystem;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -8,7 +9,9 @@ import java.util.Collection;
  *
  * @author Will "n9Mtq4" Bresnahan
  */
-public class Layer extends ArrayList<Neuron> {
+public class Layer extends ArrayList<Neuron> implements Serializable {
+	
+	private static final long serialVersionUID = 4171169620876214764L;
 	
 	public Layer(int initialCapacity) {
 		super(initialCapacity);

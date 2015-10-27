@@ -15,6 +15,7 @@ public class Connection implements Serializable {
 	
 	private static double getRandomWeight() {
 		return RANDOM.nextDouble();
+//		return .5d;
 	}
 	
 //	0 to 1
